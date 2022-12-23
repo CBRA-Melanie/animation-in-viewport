@@ -1,0 +1,68 @@
+/* LAYOUT / GENERAL */
+.cb-contact-teaser {
+	background-color: var(--black);
+	padding: 3.5rem 0 4.5rem 0;
+}
+.cb-contact-teaser__content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.cb-contact-teaser__text {
+	flex-basis: 50%;
+}
+
+/* HEADLINE  & TEXT */
+.cb-contact-teaser h2 {
+	color: var(--white);
+	font-family: var(--font-primary);
+	font-weight: 900;
+	font-size: 1.75rem;
+	width: 50%;
+	margin: 0;
+}
+.cb-contact-teaser p {
+	color: var(--white);
+	font-family: var(--font-secondary);
+
+}
+
+/* BUTTON */
+.cb-contact-teaser .cb-button__wrapper {
+	--btn-color: var(--white);
+}
+
+/* SVG & ANIMATION */
+.cb-arrow__wrapper {
+	position: absolute;
+	right: 25%;
+}
+.cb-contact-teaser #arrow {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.cb-contact-teaser #arrow .draw-arrow {
+	 stroke-width: 5;
+	 stroke: var(--white);
+	 fill: none;
+ }
+ .cb-contact-teaser #arrow.arrow-animation .draw-arrow {
+	 stroke-dasharray: 400;
+	 stroke-dashoffset: 400;
+	 animation-duration: 2s;
+	 animation-fill-mode: forwards;
+	 animation-name: draw;
+}
+
+.cb-contact-teaser #arrow.arrow-animation .draw-arrow.tail-1 {
+	 animation-delay: 0.9s;
+}
+.cb-contact-teaser #arrow.arrow-animation .draw-arrow.tail-2 {
+	 animation-delay: 1s;
+}
+ @keyframes draw {
+	 to {
+		 stroke-dashoffset: 0;
+	}
+}
